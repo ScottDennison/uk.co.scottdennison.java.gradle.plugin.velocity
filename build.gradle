@@ -1,0 +1,32 @@
+plugins {
+    id 'java-gradle-plugin'
+    id "com.gradle.plugin-publish" version "0.12.0"
+}
+
+group 'uk.co.scottdennison.java'
+version '0.1-SNAPSHOT'
+
+gradlePlugin {
+    plugins {
+        velocityPlugin {
+            id = 'uk.co.scottdennison.java.gradle.plugin.velocity'
+            displayName = 'Velocity'
+            description = 'Provides a task for processing velocity templates into java source files. Allows for custom context data and template file combinations to be specified.'
+            implementationClass = 'uk.co.scottdennison.java.gradle.plugin.velocity.VelocityPlugin'
+        }
+    }
+}
+
+pluginBundle {
+    website = 'https://dev.scottdennison.co.uk/language/java/project/gradle/plugin/velocity'
+    vcsUrl = 'https://github.com/ScottDennison/uk.co.scottdennison.java.gradle.plugin.velocity'
+    tags = ['velocity', 'template']
+}
+
+dependencies {
+    compileOnly group: 'org.apache.velocity', name: 'velocity-engine-core', version: '2.2'
+}
+
+repositories {
+    mavenCentral()
+}
