@@ -1,5 +1,6 @@
-# Created by https://www.toptal.com/developers/gitignore/api/gradle,intellij,java
-# Edit at https://www.toptal.com/developers/gitignore?templates=gradle,intellij,java
+
+# Created by https://www.toptal.com/developers/gitignore/api/java,intellij,gradle
+# Edit at https://www.toptal.com/developers/gitignore?templates=java,intellij,gradle
 
 ### Intellij ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
@@ -11,6 +12,9 @@
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
+
+# AWS User-specific
+.idea/**/aws.xml
 
 # Generated files
 .idea/**/contentModel.xml
@@ -148,4 +152,10 @@ gradle-app.setting
 ### Gradle Patch ###
 **/build/
 
-# End of https://www.toptal.com/developers/gitignore/api/gradle,intellij,java
+# Eclipse Gradle plugin generated files
+# Eclipse Core
+.project
+# JDT-specific (Eclipse Java Development Tools)
+.classpath
+
+# End of https://www.toptal.com/developers/gitignore/api/java,intellij,gradle
